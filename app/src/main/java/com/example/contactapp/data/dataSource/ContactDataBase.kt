@@ -9,7 +9,7 @@ import com.example.contactapp.data.table.Contact
 @Database(entities = arrayOf(Contact::class), version = 1)
 abstract class ContactDataBase:RoomDatabase() {
 
-    abstract fun contactDao(): ContactDao
+    abstract fun dao(): ContactDao
 
 
 }
