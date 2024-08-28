@@ -19,7 +19,7 @@ interface ContactDao {
     @Query("SELECT * FROM contact")
     fun getAllContacts():List<Contact>
 
-    @Query("Select * from contact where name Like '%' || :name || '%'")
-    fun isContactAlreadyExist(name:String):List<Contact>
+    @Query("Select * from contact where name Like '%' || :name || '%' AND phone Like '%' || :phone || '%'")
+    fun isContactAlreadyExist(name:String,phone:String):List<Contact>
 
 }
